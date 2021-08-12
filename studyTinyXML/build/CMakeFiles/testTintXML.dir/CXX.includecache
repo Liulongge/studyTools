@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../libs/include/tinystr.h
+assert.h
+-
+string.h
+-
+
+../libs/include/tinyxml.h
+ctype.h
+-
+stdio.h
+-
+stdlib.h
+-
+string.h
+-
+assert.h
+-
+string
+-
+iostream
+-
+sstream
+-
+tinystr.h
+../libs/include/tinystr.h
+
+/Users/runge.liu/Documents/code/studyTools/studyTinyXML/test.cpp
+stdio.h
+-
+stdlib.h
+-
+iostream
+-
+tinyxml.h
+/Users/runge.liu/Documents/code/studyTools/studyTinyXML/tinyxml.h
+

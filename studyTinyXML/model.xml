@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<model name="modelCircle">
+    <type>1</type>
+    <position>
+        <x>10</x>
+        <y>10</y>
+        <z>10</z>
+    </position>
+    <size>
+        <radius>1</radius>
+    </size>
+    <Grayscale>100</Grayscale>
+</model>
