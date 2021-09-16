@@ -1,0 +1,10 @@
+TN:
+SF:/usr/include/c++/9/iostream
+end_of_record
+SF:/home/parallels/Documents/code/studyTools/studyGcov/multiInfoFile/src/funcB.cpp
+FN:2,_Z5funcBv
+FNDA:1,_Z5funcBv
+DA:2,1
+DA:4,1
+DA:5,1
+end_of_record
