@@ -1,0 +1,15 @@
+TN:
+SF:/home/parallels/Documents/code/studyTools/studyGcov/integratedTestDemo/src/demo.cpp
+FN:10,_Z14handlerSIGTERMi
+FNDA:1,_Z14handlerSIGTERMi
+FN:17,main
+FNDA:1,main
+DA:10,1
+DA:12,1
+DA:13,1
+DA:14,1
+DA:17,1
+DA:19,1
+DA:22,510
+DA:23,510
+end_of_record
