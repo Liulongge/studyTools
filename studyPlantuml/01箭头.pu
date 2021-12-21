@@ -1,0 +1,29 @@
+@startuml arrow
+
+' • 表示一条丢失的消息:末尾加 x
+' • 让箭头只有上半部分或者下半部分:将 < 和 > 替换成 \ 或者 /
+' • 细箭头:将箭头标记写两次 (如 >> 或 //)
+' • 虚线箭头:用 -- 替代 -
+' • 箭头末尾加圈:->o
+' • 双向箭头:<->
+
+Bob ->x Alice   : 表示一条丢失的消息:末尾加 x
+Bob -> Alice    : 常规箭头
+Bob ->> Alice   : 细箭头
+Bob -\ Alice    : 让箭头只有上半部分:将 < 和 > 替换成"\"
+Bob -/ Alice    : 让箭头只有下半部分:将 < 和 > 替换成"/"
+Bob -\\ Alice   : 细箭头只保留上半部分
+Bob -// Alice   : 细箭头只保留下半部分
+Bob --> Alice   : 虚线箭头
+Bob ->o Alice   : 实线箭头,带圆圈
+Bob --\\o Alice : 虚线细箭头,只保留一半,带圆圈
+Bob <-> Alice   : 双向实线箭头
+Bob <->o Alice  : 双向实线箭头,右侧带圆圈
+
+Bob -[#red]> Alice     : 红色箭头1
+Bob -[#FF0000]>Alice   : 红色箭头2
+Bob -[#0000FF]>Alice   : 蓝色箭头
+Bob -[#000000]>Alice   : 黑色箭头1
+Bob -[#black]>Alice    : 黑色箭头2
+
+@enduml
