@@ -1,0 +1,12 @@
+@startuml
+
+' 默认情况下会显示所有参与者。
+' 可以使用hide unlinked命令来隐藏未被链接到的参与者。
+
+hide unlinked
+participant Alice
+participant Bob
+participant Carol
+
+Alice -> Bob : hello
+@enduml

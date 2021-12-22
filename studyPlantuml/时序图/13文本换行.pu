@@ -1,0 +1,11 @@
+@startuml
+
+' 你可以通过手动在文本中添加\n使长文本换行。
+' 或者使用maxMessageSize设置（此方式暂不支持中文换行）:
+
+skinparam maxMessageSize 50
+participant a
+participant b
+a -> b :这\n一条\n是\n手动换行
+a -> b :this is a very long message on several words
+@enduml

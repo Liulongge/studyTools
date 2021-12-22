@@ -1,0 +1,27 @@
+@startuml
+
+' 可以使用<<和>>给参与者添加构造类型。
+' 在构造类型中，你可以使用(X,color)格式的语法添加一个圆圈圈起来的字符。
+
+participant "Famous Bob" as Bob << Generated >>
+participant Alice << (C,#ADD1B2) Testable >>
+
+Bob->Alice: First message
+...
+
+
+' 默认使用 guillemet 字符来显示构造类型。
+' 你可以使用外观参数 guillemet 来修改显示行为。
+skinparam guillemet true
+participant "Famous Bob2" as Bob2 << Generated >>
+participant Alice2 << (C,#ADD1B2) Testable >>
+
+Bob2->Alice2: First message
+
+
+participant Bob3 << (C,#ADD1B2) >>
+participant Alice3 << (C,#ADD1B2) >>
+
+Bob3->Alice3: First message
+
+@enduml

@@ -1,0 +1,19 @@
+' 关键字 newpage 用于把一张图分割成多张。
+' 在 newpage 之后添加文字，作为新的示意图的标题。
+' 这样就能很方便地在 Word 中将长图分几页打印。
+
+@startuml
+
+Alice -> Bob : message 1
+Alice -> Bob : message 2
+
+newpage
+
+Alice -> Bob : message 3
+Alice -> Bob : message 4
+
+newpage A title for the\nlast page
+
+Alice -> Bob : message 5
+Alice -> Bob : message 6
+@enduml

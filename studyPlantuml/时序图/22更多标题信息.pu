@@ -1,0 +1,17 @@
+@startuml
+
+' 你可以在标题中使用creole格式。
+' 在标题描述中使用\n表示换行。
+' 还可以使用关键字title和end title定义多行标题。
+
+title
+ <u>Simple</u> communication example
+ on <i>several</i> lines and using <font color=red>html</font>
+ This is hosted by <img:sourceforge.jpg>
+end title
+
+Alice -> Bob: Authentication Request
+Bob -> Alice: Authentication Response
+
+
+@enduml

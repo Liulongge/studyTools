@@ -1,0 +1,63 @@
+@startuml
+
+' 1、自动标号
+' 关键字 autonumber 用于自动对消息编号。
+autonumber
+Bob -> Alice : Authentication Request
+Bob <- Alice : Authentication Response
+
+...
+' 人为干预标号
+' 语句 autonumber //start// 用于指定编号的初始值
+' 而 autonumber //start// //increment// 
+' 可以同时指定编号的初始值和每次增加的值
+
+autonumber 15
+Bob -> Alice : Another authentication Request
+Bob <- Alice : Another authentication Response
+...
+autonumber 40 10
+Bob -> Alice : Yet another authentication Request
+Bob <- Alice : Yet another authentication Response
+
+...
+
+' 你可以在双引号内指定编号的格式。
+' 格式是由 Java 的DecimalFormat类实现的： 
+' (0 表示数字；# 也表示数字，但默认为0)。
+' 你也可以用 HTML 标签来制定格式。
+autonumber "<b>[000]"
+Bob -> Alice : Authentication Request
+Bob <- Alice : Authentication Response
+
+autonumber 15 "<b>(<u>##</u>)"
+Bob -> Alice : Another authentication Request
+Bob <- Alice : Another authentication Response
+
+autonumber 40 10 "<font color=red><b>Message 0  "
+Bob -> Alice : Yet another authentication Request
+Bob <- Alice : Yet another authentication Response
+...
+
+' 你还可以用语句 autonumber stop 和 
+' autonumber resume //increment// //format// 
+' 来表示暂停或继续使用自动编号。
+autonumber 10 10 "<b>[000]"
+Bob -> Alice : Authentication Request
+Bob <- Alice : Authentication Response
+
+autonumber stop
+Bob -> Alice : dummy
+
+autonumber resume "<font color=red><b>Message 0  "
+Bob -> Alice : Yet another authentication Request
+Bob <- Alice : Yet another authentication Response
+
+autonumber stop
+Bob -> Alice : dummy
+
+autonumber resume 1 "<font color=blue><b>Message 0  "
+Bob -> Alice : Yet another authentication Request
+Bob <- Alice : Yet another authentication Response
+
+@enduml

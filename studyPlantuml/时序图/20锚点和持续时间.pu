@@ -1,0 +1,14 @@
+@startuml
+
+' 使用teoz在图表中添加锚点，从而指定持续时间。
+
+!pragma teoz true
+
+{start} Alice -> Bob : start doing things \n during duration
+Bob -> Max : something
+Max -> Bob : something else
+{end} Bob -> Alice : finish
+
+{start} <-> {end} : some time
+
+@enduml

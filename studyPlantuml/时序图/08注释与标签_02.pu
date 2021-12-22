@@ -1,0 +1,38 @@
+@startuml
+
+' 改变备注框的形状 [hnote和rnote]
+' 你可以使用 hnote 和 rnote 这两个关键字来修改备注框的形状：
+' hnote代表六边形（hexagonal）的备注框；
+' rnote代表正方形（rectangle）的备注框。
+
+caller -> server : conReq
+hnote over caller : 空闲
+caller <- server : conConf
+rnote over server
+ "r"是正方形
+ "h"是六边形
+endrnote
+
+rnote over server
+ 多
+ 行
+ 文本
+endrnote
+
+hnote over caller
+ 多
+ 行
+ 文本
+endhnote
+...
+
+' 在多个参与者添加备注 [across]
+' 你可以直接在所有参与者之间添加备注，格式是：
+' note across: 备注描述
+Alice->Bob:m1
+Bob->Charlie:m2
+note over Alice, Charlie: 创建跨越所有参与者的备注的旧方法：\n ""note over //FirstPart, LastPart//"".
+note across: 新方法:\n note across
+Bob->Alice
+hnote across: 跨越所有参与者的备注。
+@enduml

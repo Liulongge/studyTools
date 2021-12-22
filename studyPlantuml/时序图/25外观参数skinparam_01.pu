@@ -1,0 +1,37 @@
+@startuml
+
+' 用skinparam改变字体和颜色。
+' 可以在如下场景中使用:
+' 在图示的定义中，
+' 在引入的文件中，
+' 在命令行或者ANT任务提供的配置文件中。
+' 你也可以修改其他渲染元素，如以下示例:
+
+skinparam sequenceArrowThickness 2
+skinparam roundcorner 20
+skinparam maxmessagesize 60
+skinparam sequenceParticipant underline
+
+actor User
+participant "First Class" as A
+participant "Second Class" as B
+participant "Last Class" as C
+
+User -> A: DoWork
+activate A
+
+A -> B: Create Request
+activate B
+
+B -> C: DoWork
+activate C
+C --> B: WorkDone
+destroy C
+
+B --> A: Request Created
+deactivate B
+
+A --> User: Done
+deactivate A
+
+@enduml

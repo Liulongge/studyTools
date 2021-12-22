@@ -1,0 +1,11 @@
+@startuml
+' 可以给群发信息color[着色]。
+
+Alice -> Bob: Authentication Request
+alt#Gold #LightBlue Successful case
+    Bob -> Alice: Authentication Accepted
+else #Pink Failure
+    Bob -> Alice: Authentication Rejected
+end
+
+@enduml

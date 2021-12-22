@@ -1,0 +1,43 @@
+@startuml
+
+' 信息的注释
+' 可以使用note left 或note right 关键字在信息后面加上注释。
+' 你可以使用end note 关键字有一个多行注释。
+Alice->Bob : hello
+note left: this is a first note
+
+Bob->Alice : ok
+note right: this is another note
+
+Bob->Bob : I am thinking
+note left
+a note
+can also be defined
+on several lines
+end note
+...
+
+' 其他的注释
+' 可以使用note left of，note right of或note over在节点(participant)的相对位置放置注释。
+' 还可以通过修改背景色来高亮显示注释。
+' 以及使用关键字end note来添加多行注释。
+participant Alice
+participant Bob
+note left of Alice #AA0000
+This is displayed
+left of Alice.
+end note
+
+note right of Alice: This is displayed right of Alice.
+note over Alice: This is displayed over Alice.
+note over Alice, Bob #FFAAAA: This is displayed\n over Bob and Alice.
+note over Bob, Alice
+This is yet another
+example of
+a long note.
+end note
+
+
+
+
+@enduml

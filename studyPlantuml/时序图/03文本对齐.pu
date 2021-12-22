@@ -1,0 +1,17 @@
+' 文本对齐
+' 让响应信息显示在箭头下面
+' 你可以使用skinparam responseMessageBelowArrow true命令，
+' 让响应信息显示在箭头下面。
+
+@startuml
+skinparam responseMessageBelowArrow true
+Bob -> Alice : hello
+Alice -> Bob : ok
+
+
+' 消息文字可以用\n来换行。
+
+A->B: This is a signal to self.\nIt also demonstrates\nmultiline \ntext
+
+
+@enduml

@@ -1,0 +1,16 @@
+@startuml
+
+' solid 实线
+' 在时序图中使用实线生命线：skinparam lifelineStrategy solid
+
+' style strictuml
+' 为了符合严格UML的标准（线头的形状必须是三角形，而不能是箭头形），
+' 你可以使用：
+' skinparam style strictuml
+
+skinparam lifelineStrategy solid
+skinparam style strictuml
+Bob -> Alice : hello
+Alice -> Bob : ok
+
+@enduml

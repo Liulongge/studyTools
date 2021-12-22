@@ -1,0 +1,15 @@
+@startuml
+
+' 你可以通过使用==关键词来将你的图表分割成多个逻辑步骤。
+
+== 初始化 ==
+
+Alice -> Bob: 认证请求
+Bob --> Alice: 认证响应
+
+== 重复 ==
+
+Alice -> Bob: 认证请求
+Alice <-- Bob: 认证响应
+
+@enduml

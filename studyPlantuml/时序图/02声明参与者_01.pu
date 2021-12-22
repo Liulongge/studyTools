@@ -1,5 +1,8 @@
 @startuml
 
+' 使用 participant 关键字来声明一个参与者可以使你对参与者做出更多控制。
+' 关键字 participant 用于改变参与者的先后顺序。
+' 你也可以使用下面这些关键字来声明参与者，这会改变参与者的外观：
 ' actor（角色）
 ' boundary（边界）
 ' control（控制）
@@ -7,6 +10,9 @@
 ' database（数据库）
 ' collections（集合）
 ' queue（队列）
+
+' 关键字 as 用于重命名参与者
+
 participant participant as Foo
 actor       actor       as Foo1
 boundary    boundary    as Foo2
@@ -15,6 +21,7 @@ entity      entity      as Foo4
 database    database    as Foo5
 collections collections as Foo6
 queue       queue       as Foo7
+
 Foo -> Foo1 : To actor 
 Foo -> Foo2 : To boundary
 Foo -> Foo3 : To control
