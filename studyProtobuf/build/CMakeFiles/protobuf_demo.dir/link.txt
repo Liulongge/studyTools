@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/protobuf_demo.dir/protobufGenFiles/game.pb.cc.o CMakeFiles/protobuf_demo.dir/test.cpp.o  -o protobuf_demo   -L/home/runge.liu/code/studyTools/studyProtobuf/protobuf-21.5/build  -Wl,-rpath,/home/runge.liu/code/studyTools/studyProtobuf/protobuf-21.5/build -lprotobuf 
