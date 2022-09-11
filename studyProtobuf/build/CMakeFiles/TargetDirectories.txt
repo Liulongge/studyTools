@@ -1,3 +1,0 @@
-/home/runge.liu/code/studyTools/studyProtobuf/build/CMakeFiles/rebuild_cache.dir
-/home/runge.liu/code/studyTools/studyProtobuf/build/CMakeFiles/edit_cache.dir
-/home/runge.liu/code/studyTools/studyProtobuf/build/CMakeFiles/protobuf_demo.dir

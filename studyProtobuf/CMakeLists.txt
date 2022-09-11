@@ -14,7 +14,7 @@ SET (ALL_SRCS ${DIR_PB_SRCS} ${DIR_SRCS})
 add_executable(protobuf_demo ${ALL_SRCS}) # 链接*.cc源文件 及 *.pb.cc文件
 
 target_link_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/protobuf-21.5/build)
-target_link_libraries(protobuf_demo PRIVATE protobuf)
+target_link_libraries(protobuf_demo PRIVATE protobuf pthread)
 target_include_directories(${PROJECT_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/protobuf-21.5/src
                 ${CMAKE_CURRENT_SOURCE_DIR}/protobufGenFiles) # 
 

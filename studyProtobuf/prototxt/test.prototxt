@@ -1,0 +1,8 @@
+person {
+  age: 25
+  name: "John"
+}
+person {
+  age: 40
+  name: "Tony"
+}

@@ -13,50 +13,44 @@ $ make -j8
 
 ## 定义*.proto文件
 ```proto
-syntax = "proto3";
-package pt;
-
-message req_login
-{
-    string username = 1;
-    string password = 2;
+syntax = "proto2";
+ 
+message Person {
+  required int32 age = 1;
+  required string name = 2;
 }
-
-message obj_user_info
-{
-    string nickname    = 1;    //昵称
-    string icon        = 2;    //头像
-    int64  coin        = 3;    //金币
-    string location    = 4;    //所属地
-}
-
-//游戏数据统计
-message obj_user_game_record
-{
-    string time = 1;
-    int32 kill  = 2;        //击杀数
-    int32 dead  = 3;        //死亡数
-    int32 assist= 4;        //助攻数
-}
-
-message rsp_login
-{
-    enum RET {
-        SUCCESS         = 0;
-        ACCOUNT_NULL    = 1;    //账号不存在
-        ACCOUNT_LOCK    = 2;    //账号锁定
-        PASSWORD_ERROR  = 3;    //密码错误
-        ERROR           = 10;
-    }
-    int32 ret = 1;
-    obj_user_info user_info = 2;
-    repeated obj_user_game_record record = 3;
+ 
+message Family {
+  repeated Person person = 1;
 }
 ```
 
 ## 生成c++相关*.pb.cc, *.pb.h文件
 ``` bash
-$ ./protobuf-21.5/build/protoc ./game.proto --cpp_out=./protobufGenFiles/
+$ ./protoc ./*.proto --cpp_out=./
+# *.proto: protobuf源文件
+# --cpp_out: 生成*pb.cc, *pb.h路径
 ```
 
 ## 编译源文件
+``` bash
+$ ./release.sh
+```
+
+## 运行
+    生成*.prototxt内容如下：
+    person {
+        age: 25
+        name: "John"
+    }
+    person {
+        age: 40
+        name: "Tony"
+    }
+
+## 参考
+[PROTOBUF介绍及简单使用](https://www.freesion.com/article/8179689487/)
+
+[PROTOBUF介绍及简单使用(下）之文件读写](https://www.freesion.com/article/6658661335/)
+
+
