@@ -1,0 +1,24 @@
+<!--
+视频标签
+语法：<video src="视频的URL"></video>
+常见属性
+属性          作用              特殊说明
+src(必须属性)  视频URL           支持格式：MP4, WebM, Ogg
+controls      显示视频控制面板    
+loop          循环播放
+muted         静音播放
+autoplay      自动播放           为了提升用户体验，浏览器支持在静音状态自动播放(需与静音搭配使用)   
+width/height  设置视频宽高
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video src="./hk.mp4" width="500" height="500" controls loop muted autoplay></video>
+</body>
+</html>

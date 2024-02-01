@@ -1,0 +1,59 @@
+<!--
+表格
+网页中的表格和Excel表格类似，用来展示数据
+作用：用表格结构标签吧内容划分区域，让表格结构清晰，语义更清晰
+标签：table嵌套tr, tr嵌套td/th
+
+标签名        说明
+table        表格
+tr           行
+th           表头单元格
+td           内容单元格
+thead        表格头部(表格头部内容)
+tbody        表格主体(主要内容区域)
+tfoot        表格底部(汇总信息区域)
+
+提示：在网页中，表格默认没有边框线，使用border属性可以为表格添加边框线
+属性：
+    1、border="x"：需要x像素的边框线
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>姓名</th>
+            <th>语文</th>
+            <th>数学</th>
+            <th>总分</th>
+        </tr>
+
+        <tr>
+            <td>张三</td>
+            <td>99</td>
+            <td>100</td>
+            <td>199</td>
+        </tr>
+
+        <tr>
+            <td>李四</td>
+            <td>100</td>
+            <td>110</td>
+            <td>210</td>
+        </tr>
+
+        <tr>
+            <td>总结</td>
+            <td>全市第一</td>
+            <td>全市第一</td>
+            <td>全市第一</td>
+        </tr>
+    </table>
+</body>
+</html>
