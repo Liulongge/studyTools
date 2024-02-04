@@ -1,0 +1,88 @@
+<!--
+选择器
+作用：查找标签，设置样式
+基础选择器：
+    标签选择器
+    类选择器
+    id选择器
+    通配符选择器
+
+1、标签选择器：
+    使用标签名作为选择器 -> 选中同名标签设置相同的样式(如果没有标签名, 就没有标签选择器)
+    例如：p, h1, div, a, img......
+    缺点：无法差异化同名标签的样式
+
+2、类选择器：
+    作用：查找标签，差异化设置标签的显示效果
+    步骤：
+        定义类选择器 -> .类名
+        使用类选择器 -> 标签添加 class="类名"
+    语法：
+        <style>
+            .red{
+                color: red;
+            }
+        </style>
+        <div class="red">这是div标签</div>
+
+    注意：
+        类名自定义，不要用纯数字或中文，尽量用英文名
+        一个类选择器可以提供多个标签使用
+        一个标签可以使用多个类名，类名之前用空格隔开
+    开发习惯：
+        类名见名知义，多个单词可以用”-“连接，例如：news-hd
+    
+
+3、id选择器：
+    作用：查找标签，差异化设置标签的显示效果
+    场景：id选择器一般配合JavaScript使用，很少用来设置CSS样式
+    步骤：
+        定义id选择器 -> #id名
+        使用id选择器 -> 标签添加id="id名"
+    语法：
+        <style>
+            #red{
+                color: red;
+            }
+        </style>
+        <div id="red">这是一个div标签</div>
+    规定：同一个id选择器在一个页面只能使用一次
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选择器</title>
+    <style>
+        /* 标签选择器，选择同名标签，设置相同样式，无法差异化同名标签的样式 */
+        p{
+            color:blue;
+            font-size: 20px;
+        }
+
+        .red{
+            color: red;
+            font-size: 30px;
+        }
+
+        #red{
+                color: rgb(50, 216, 161);
+                font-size: 40px;
+            }
+
+    </style>
+</head>
+<body>
+    <!-- 使用标签选择器 -->
+    <p>这是p标签1</p>
+    <p>这是p标签2</p>
+
+    <!-- 使用类选择器 -->
+    <div class="red">这是div标签</div>
+
+    <!-- 使用id选择器 -->
+    <div id="red">这是一个div标签</div>
+</body>
+</html>
