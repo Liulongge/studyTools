@@ -1,0 +1,165 @@
+<!--
+文字控制属性
+
+1、字体大小：font-size
+    属性值：文字尺寸，PC端网页最常用的单位px
+    语法：
+        p {
+            font-size: 20px；
+        }
+    注意：
+        font-size属性必须有单位，否则不生效
+        谷歌浏览器默认字体大小为16px
+2、字体粗细：font-weight
+    属性值：
+        数字(开发使用)
+            正常：400
+            加粗：700
+        关键字
+            正常：normal
+            加粗：bold
+3、字体倾斜
+    作用：清除文字默认的倾斜效果
+    属性名：font-style
+    属性值：
+        正常(不倾斜)：normal
+        倾斜：italic
+4、字体行高
+    作用：设置多上文本的间距
+    属性名：line-height
+    属性值：
+        数字 + px
+        数字(当前标签font-size属性值的倍数)
+    语法：
+        line-height: 30px;
+        line-height: 2;
+    行高的测试方法：从一行文字的最顶端(最底端)量到下一行文字的最顶端(最底端)
+5、文字族
+    属性名：font-family
+    属性值：字体名
+    语法：font-family: 楷体
+    扩展：font-family属性值可以书写多个字体名，各个字体名用逗号隔开，执行顺序是从左向右依次查找
+         前面的字体没有会尝试使用后面字体
+6、font复合属性
+    使用场景：设置网页文字公共样式的时候
+    复合属性：属性的简写方式，一个属性对应多个值的写法，各个属性之间用空格隔开
+    font：是否倾斜 是否加粗 字号/行高 字体(必须按照顺序书写)
+    注意：字号和字体必须书写，否则font不生效
+    语法：
+        1、
+            div {
+                font-style: italic;
+                font-weight: 200;
+                line-height: 2;
+                font-family: 楷体;
+            }
+        2、
+            div {
+                font: italic 700 30px/2 楷体;
+            }
+7、文本缩进：text-indent
+    属性名：text-indent
+    属性值：
+        数字 + px
+        数字 + em(推荐：1em=当前标签的字号大小)
+    语法：
+        p {
+            text-indent: 2em;
+        }
+8、文本(图片)对齐
+    作用：控制内容水平对齐方式
+    属性名：text-align
+    属性值：
+        属性值     效果
+        left      左对齐(默认)
+        center    居中对齐
+        right     右对齐
+    语法：
+        text-aligh: center
+9、修饰线
+    属性名：text-decoration
+    属性值：
+        属性值           效果
+        none            无
+        underline       下划线
+        line-through    删除线
+        overline        上划线
+10、颜色
+    属性名：color
+    属性值：
+        颜色表示方式     属性值
+        颜色关键字       颜色英文单词
+        rgb表示法       rgb(r, g, b)
+        rgba表示法      rgba(r, g, b, a)
+        十六进制表示法    #RRGGBB
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文字控制属性</title>
+    <style>
+        .size {
+            font-size: 20px;
+        }
+        .weight {
+            font-weight: bold;
+        }
+        .style {
+            font-style: italic;
+        }
+        .height {
+            /* line-height: 50px; */
+            line-height: 2;
+        }
+        .family {
+            font-family: 楷体, 'Times New Roman', Times, serif;
+        }
+        .font {
+            font: italic bold 30px/2 楷体;
+        }
+        .indent {
+            /* 与font-size保持同步 */
+            text-indent: 2em;
+            font-size: 20px;
+        }
+        .align {
+            text-align: center;
+        }
+        /* 图片居中对齐 */
+        div {
+            text-align: center;
+        }
+        .decoration {
+            text-decoration: underline;
+        }
+        .color {
+            color: rgba(0, 0, 255, 0.53);
+        }
+
+    </style>
+</head>
+<body>
+    <p class="size">测试字体大小</p>
+    <p class="weight">测试字体粗细</p>
+    <p class="style">测试字体倾斜</p>
+    <p class="height">测试字体行高测试字体行高测试字体行高测试字体行高
+        测试字体行高测试字体行高测试字体行高测试字体行高测试字体行高
+        测试字体行高测试字体行高测试字体行高测试字体行高测试字体行高
+        测试字体行高测试字体行高测试字体行高测试字体行高测试字体行高</p>
+    <p class="family">测试文字族(Times New Roman)</p>
+    <p class="font">测试 font 属性</p>
+    <p class="indent">测试文本缩进测试文本缩进测试文本缩进测试文本缩进测试文本缩进
+        测试文本缩进测试文本缩进测试文本缩进测试文本缩进测试文本缩进测试文本缩进测试文本缩进
+        测试文本缩进测试文本缩进测试文本缩进测试文本缩进测试文本缩进测试文本缩进测试文本缩进
+    </p>
+    <p class="align">测试文字对齐方式</p>
+    <div>
+        <img src="./cat.jpg" alt="">
+    </div>
+    <p class="decoration">测试文字修饰线</p>
+    <p class="color">测试文字颜色</p>
+</body>
+</html>
