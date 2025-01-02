@@ -1,0 +1,13 @@
+{
+    "address": {
+        "city": "Anytown",
+        "state": "CA",
+        "street": "123 Main St"
+    },
+    "age": 30,
+    "name": "John Doe",
+    "phone_numbers": {
+        "home": "555-1234",
+        "work": "555-5678"
+    }
+}

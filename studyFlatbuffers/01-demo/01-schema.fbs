@@ -1,0 +1,11 @@
+namespace MyGame;
+ 
+table Monster {
+  pos: Vec3 = (x: 0.0, y: 0.0, z: 0.0);
+  mana: int = 150;
+  hp: int = 100;
+  name: string;
+  friendly: bool = false (deprecated);
+}
+ 
+root_type Monster;
