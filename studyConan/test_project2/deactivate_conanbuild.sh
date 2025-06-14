@@ -1,0 +1,1 @@
+. "/Users/runge.liu/Documents/code/studyTools/studyConan/test_project2/deactivate_conanbuildenv-release-armv8.sh"
